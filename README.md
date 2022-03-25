@@ -1,0 +1,2 @@
+# Make-a-square
+Make a square with size 4X4 by using 4 or 5 pieces. The pieces can be rotated or flipped and all pieces should be used to form a square. Example sets of pieces.There may be more than one possible solution for a set of pieces, and not every arrangement will work even with a set for which a solution can be found. Examples using the above set of pieces... Rotate piece D 90 degree then flip horizontal {R 90 + F H}
