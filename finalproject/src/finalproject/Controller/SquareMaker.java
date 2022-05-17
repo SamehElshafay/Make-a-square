@@ -41,7 +41,7 @@ public class SquareMaker extends ShapeFormer {
         ArrayList <Square> squares = new ArrayList<>();
 
         ArrayList <ShapePreparer[]> groupsOfShapes = 
-            separateObjects(rotation.getProbabilityOfRotatedShape(getShapeProbability() ,
+            deepCopy(rotation.getProbabilityOfRotatedShape(getShapeProbability() ,
                     THIS_CLASS )) ;
         
         for(int i = 0 ; i < groupsOfShapes.size() ; i++)
@@ -58,7 +58,7 @@ public class SquareMaker extends ShapeFormer {
     }
     
     //TODO : To make all objects has no the same reference in the memory
-    public ArrayList<ShapePreparer[]> separateObjects(ArrayList<ShapePreparer[]> rotatedShapes) {
+    public ArrayList<ShapePreparer[]> deepCopy(ArrayList<ShapePreparer[]> rotatedShapes) {
         ArrayList <ShapePreparer[]> shapeProbabilitiesRotation = new ArrayList<>();
         for(int i = 0 ; i < rotatedShapes.size() ; i++){
             ShapePreparer Shapes[] = new ShapePreparer[rotatedShapes.get(0).length];
