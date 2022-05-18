@@ -19,7 +19,7 @@ public class ShapeFormer {
         for(int i = 0 ; i < rotatedShapes.size() ; i++){
             ShapePreparer Shapes[] = new ShapePreparer[rotatedShapes.get(0).length];
             for(int y = 0 ; y < Shapes.length ; y++){
-                int shapeStructure [][] = rotatedShapes.get(i)[y].getShape().getShapeStructure() ;
+                int shapeStructure [][] = rotatedShapes.get(i)[y].getShapeStructure() ;
                 Shapes[y] = new ShapePreparer(shapeStructure);
             }
             shapeProbabilitiesRotation.add(Shapes);
