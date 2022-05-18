@@ -57,19 +57,6 @@ public class SquareMaker extends ShapeFormer {
         return bestSolution ;
     }
     
-    //TODO : To make all objects has no the same reference in the memory
-    public ArrayList<ShapePreparer[]> deepCopy(ArrayList<ShapePreparer[]> rotatedShapes) {
-        ArrayList <ShapePreparer[]> shapeProbabilitiesRotation = new ArrayList<>();
-        for(int i = 0 ; i < rotatedShapes.size() ; i++){
-            ShapePreparer Shapes[] = new ShapePreparer[rotatedShapes.get(0).length];
-            for(int y = 0 ; y < Shapes.length ; y++){
-                int shapeStructure [][] = rotatedShapes.get(i)[y].getShape().getShapeStructure() ;
-                Shapes[y] = new ShapePreparer(shapeStructure);
-            }
-            shapeProbabilitiesRotation.add(Shapes);
-        }
-        return shapeProbabilitiesRotation ;
-    }
     
     public boolean isSquareCompleated(Square square){
         int rows = square.getSquare().length ;

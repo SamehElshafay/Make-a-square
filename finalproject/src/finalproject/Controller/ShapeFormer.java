@@ -13,6 +13,20 @@ import java.util.ArrayList;
  */
 public class ShapeFormer {
     
+    //TODO : To make all objects has no the same reference in the memory
+    public ArrayList<ShapePreparer[]> deepCopy(ArrayList<ShapePreparer[]> rotatedShapes) {
+        ArrayList <ShapePreparer[]> shapeProbabilitiesRotation = new ArrayList<>();
+        for(int i = 0 ; i < rotatedShapes.size() ; i++){
+            ShapePreparer Shapes[] = new ShapePreparer[rotatedShapes.get(0).length];
+            for(int y = 0 ; y < Shapes.length ; y++){
+                int shapeStructure [][] = rotatedShapes.get(i)[y].getShape().getShapeStructure() ;
+                Shapes[y] = new ShapePreparer(shapeStructure);
+            }
+            shapeProbabilitiesRotation.add(Shapes);
+        }
+        return shapeProbabilitiesRotation ;
+    }
+    
     public ArrayList<ShapePreparer[]> formAllShapesProbability(ShapePreparer[] basicShapes) {
         ArrayList<ShapePreparer[]> finalShapes = new ArrayList<ShapePreparer[]> ();
         int numberOfShapes = basicShapes.length ;
